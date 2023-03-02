@@ -1,0 +1,25 @@
+First I created a store database.
+CREATE TABLE candystore (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, colour TEXT, price INTEGER);
+
+INSERT INTO candystore Values (1, "Hershey", 50, "Blue", 2);
+INSERT INTO candystore Values (2, "POMBEAR", 100, "Red", 3);
+INSERT INTO candystore Values (3, "Wine", 60, "Rose", 5);
+INSERT INTO candystore Values (4, "Beer", 40, "Gold", 3);
+INSERT INTO candystore Values (5, "Cheese", 100, "Yellow", 1);
+INSERT INTO candystore Values (6, "Bread", 30, "White", 2);
+INSERT INTO candystore Values (7, "Water", 100, "White", 1);
+INSERT INTO candystore Values (8, "Milk", 30, "White" , 1);
+INSERT INTO candystore Values (9, "Banana", 50, "Yellow", 2);
+INSERT INTO candystore Values (10, "Tea", 20, "Black", 3);
+INSERT INTO candystore Values (11, "Sugar", 50, "White", 1);
+INSERT INTO candystore Values (12, "Candy", 150, "Pink", 4);
+INSERT INTO candystore Values (13, "fries", 50,"Yellow",2);
+INSERT INTO candystore Values (14, "pasta", 100, "Yellow", 2);
+INSERT INTO candystore Values (15, "coke", 50, "Brown", 3);
+SELECT * FROM candystore;
+
+then displayed the database ordered by price.
+SELECT * FROM candystore ORDER BY price;
+
+Then I combined the quantity of all items.
+SELECT SUM(quantity) FROM candystore;
