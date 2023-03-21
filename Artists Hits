@@ -1,0 +1,34 @@
+First in create two seperate tables. "One for the artists" and "one for the songs the artists have written".
+
+CREATE TABLE famouspeople (id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT,
+AGE INTEGER);
+
+INSERT INTO famouspeople (fullname, age) VALUES ("Beyonce","40");
+INSERT INTO famouspeople (fullname, age) VALUES ("Rihanna", "35");
+INSERT INTO famouspeople (fullname, age) VALUES ("Drake", "32");
+INSERT INTO famouspeople (fullname, age) VALUES ("Desiigner", "25");
+INSERT INTO famouspeople (fullname, age) VALUES ("Wizkid","30");
+INSERT INTO famouspeople(fullname, age) VALUES ("Davido", "32");
+INSERT INTO famouspeople(fullname, age) VALUES ("Tiwa Savage", "35");
+
+
+Create TABLE songs (id INTEGER PRIMARY KEY AUTOINCREMENT,
+person_id INTEGER,
+name TEXT);
+
+INSERT INTO songs (person_id, name) VALUES (1, "If i were a boy");
+INSERT INTO songs (person_id, name) VALUES (2, "Umbrella");
+INSERT INTO songs (person_id, name) VALUES (3, "Come closer");
+INSERT INTO songs (person_id, name) VALUES (4, "Panda");
+INSERT INTO songs (person_id, name)
+VALUES (5, "Essence");
+INSERT INTO songs (person_id, name) VALUES (6, "Aye");
+INSERT INTO songs (person_id, name) VALUES (7,"Koroba");
+
+After that I have created an INNER Joint to combine both tables together, to create a nice human readable list.
+
+SELECT f.fullname, s.name
+FROM famouspeople AS f
+INNER JOIN songs as s
+ON f.id=s.person_id;
